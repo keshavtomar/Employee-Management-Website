@@ -17,7 +17,7 @@ export default function Dashboard() {
 
 
     const loadData = async () => {
-        let response = await fetch("http://localhost:4000/api/employeeData", {
+        let response = await fetch("https://employee-management-8ttewlwzf-keshavtomar.vercel.app/api/employeeData", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

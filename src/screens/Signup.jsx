@@ -20,7 +20,7 @@ export default function Signup() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const response = await fetch("http://localhost:4000/api/createuser", {
+        const response = await fetch("https://employee-management-8ttewlwzf-keshavtomar.vercel.app/api/createuser", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
