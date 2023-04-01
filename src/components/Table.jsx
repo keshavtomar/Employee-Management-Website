@@ -9,7 +9,7 @@ export default function Table() {
     const [empData, setempData] = useState([])
 
     const loadData = async () => {
-        let response = await fetch("https://employee-management-api.vercel.app/api/employeeData", {
+        let response = await fetch("localhost:4000/api/employeeData", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
