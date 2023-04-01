@@ -11,6 +11,7 @@ export default function Table() {
     const loadData = async () => {
         let response = await fetch("https://employee-management-api.vercel.app/api/employeeData", {
             method: "GET",
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             }
