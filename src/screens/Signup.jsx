@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../components/Navbar';
 
 export default function Signup() {
     const [Credentials, setCredentials] = useState({
@@ -67,6 +68,7 @@ export default function Signup() {
 
     return (
         <div>
+            <Navbar />
             <section className="forms-section">
                 <ToastContainer />
                 <div className="forms">

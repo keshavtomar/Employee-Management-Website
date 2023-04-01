@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../components/Navbar';
 
 
 export default function Login() {
@@ -63,6 +64,7 @@ export default function Login() {
     return (
         <div>
             <ToastContainer />
+            <Navbar />
             <section className="forms-section">
                 <div className="forms">
                     <div className="form-wrapper is-active">

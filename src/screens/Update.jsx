@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/updatestyle.css'
+import Navbar from '../components/Navbar';
 
 
 export default function Update() {
@@ -55,6 +56,7 @@ export default function Update() {
 
     return (
         <div>
+            <Navbar />
             <style href='../style/updatestyle.css'></style>
             <link rel="stylesheet" href="../style/updatestyle.css" />
             <div className="main-block">

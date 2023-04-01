@@ -76,32 +76,33 @@ export default function Navbar() {
                     <Link className="navbar-brand" to="/">
                         Employee Management
                     </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse d-flex flex-row-reverse" id="navbarScroll">
+                    <div className="collapse navbar-collapse" id="navbarNav">
                         {!localStorage.getItem("authToken") ?
-                            <ul className="navbar-nav me-4 my-2 my-lg-0 navbar-nav-scroll" style={{ '--bs-scroll-height': '100px' }}>
-                                <li className="nav-item me-2">
+                            <ul className="navbar-nav  msauto float-end ms-lg-auto px-3" style={{ '--bs-scroll-height': '100px' }}>
+                                <li className="nav-item">
                                     <Link className="nav-link active" aria-current="page" to="/login">
                                         <button type="button" className="btn btn-outline-info">Login</button>
                                     </Link>
                                 </li>
-                                <li className="nav-item me-2 ">
+                                <li className="nav-item ">
                                     <Link className="nav-link active" to="/signup">
                                         <button type="button" className="btn btn-outline-info">SignUp</button>
                                     </Link>
                                 </li>
-                            </ul> :
-                            <ul className="navbar-nav me-4 my-2 my-lg-0 navbar-nav-scroll" style={{ '--bs-scroll-height': '100px' }}>
+                            </ul>
+                            :
+                            <ul className="navbar-nav  msauto float-end ms-lg-auto px-3" style={{ '--bs-scroll-height': '100px' }}>
                                 <li className='nav-item'>
-                                    <button type='button' className='btn btn-primary' style={{ 'height': '100%', 'margin-right': '15px' }} onClick={handleDashboard}>
+                                    <button type='button' className='btn btn-primary' style={{ 'height': '90%', 'margin-right': '15px', 'marginTop': '5px' }} onClick={handleDashboard}>
                                         <DashboardIcon />
                                         Dashboard
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" className="btn btn-warning" style={{ 'height': '100%', 'margin-right': '15px' }} onClick={handleAddEmployee}>Add Employee</button>
+                                    <button type="button" className="btn btn-warning" style={{ 'height': '90%', 'margin-right': '15px', 'marginTop': '5px' }} onClick={handleAddEmployee}>Add Employee</button>
                                 </li>
                                 <li className="nav-item dropstart">
                                     <Link className="nav-link " to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
