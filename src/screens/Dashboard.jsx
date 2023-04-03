@@ -18,7 +18,7 @@ export default function Dashboard() {
 
     const loadData = async () => {
         let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
-            method: "POST",
+            method: "GET",
             headers: {
                 'Content-Type': 'application/json'
             }
