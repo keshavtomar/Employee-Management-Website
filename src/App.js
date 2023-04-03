@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     loadData();
-  }, [empData])
+  })
 
   console.log(empData);
   return (
