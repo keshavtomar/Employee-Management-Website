@@ -10,8 +10,26 @@ import Home from './screens/Home'
 import Form from './screens/AddEmployee'
 import Update from './screens/Update';
 import Dashboard from './screens/Dashboard'
+import { LoginContext } from './components/ContextProvider/Context';
+import { useEffect, useContext, useState } from "react";
 
 function App() {
+  const { empData, setempData } = useContext(LoginContext);
+
+  const loadData = async () => {
+    let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
+      method: "GET",
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    response = await response.json()
+    setempData(response[0]);
+  }
+
+  useEffect(() => {
+    loadData();
+  })
 
   return (
     <div>
