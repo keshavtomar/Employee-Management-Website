@@ -6,7 +6,7 @@ export const LoginContext = createContext("");
 const Provider = ({ children }) => {
 
     const [empData, setempData] = useState([]);
-    const value = { state: { empData }, actions: { setempData } };
+    const value = { empData, setempData };
 
 
     return (
