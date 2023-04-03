@@ -24,7 +24,6 @@ function App() {
       }
     })
     response = await response.json()
-    console.log(response[0]);
     setempData(response[0]);
   }
 
@@ -32,6 +31,7 @@ function App() {
     loadData();
   }, [empData])
 
+  console.log(empData);
   return (
     <div>
       <Router>

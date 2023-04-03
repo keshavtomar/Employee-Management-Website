@@ -40,7 +40,7 @@ export default function Table() {
                     </tr>
                 </thead>
 
-                {/* <tbody>
+                <tbody>
                     {empData !== [] ?
                         empData.map((emp, i) => {
                             return (
@@ -50,7 +50,7 @@ export default function Table() {
                         :
                         null
                     }
-                </tbody> */}
+                </tbody>
             </table>
         </div >
     )
