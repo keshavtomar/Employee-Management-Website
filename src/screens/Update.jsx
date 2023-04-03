@@ -27,7 +27,7 @@ export default function Update() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const response = await fetch("https://employee-management-api.vercel.app/api/updateEmployee", {
+        const response = await fetch("https://employee-management-api-oyx7.onrender.com/api/updateEmployee", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

@@ -24,7 +24,7 @@ export default function AddEmployee() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const responseid = await fetch("https://employee-management-api.vercel.app/api/getId", {
+        const responseid = await fetch("https://employee-management-api-oyx7.onrender.com/api/getId", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -35,7 +35,7 @@ export default function AddEmployee() {
         const ids = await responseid.json();
         const gotId = ids.id;
 
-        const response = await fetch("https://employee-management-api.vercel.app/api/addEmployee", {
+        const response = await fetch("https://employee-management-api-oyx7.onrender.com/api/addEmployee", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
