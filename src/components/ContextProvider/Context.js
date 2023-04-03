@@ -6,10 +6,12 @@ export const LoginContext = createContext("");
 const Context = ({ children }) => {
 
     const [empData, setempData] = useState([]);
+    const value = { state: { empData }, actions: { setempData } };
+
 
     return (
 
-        <LoginContext.Provider value={{ empData, setempData }}>
+        <LoginContext.Provider value={value}>
             {children}
         </LoginContext.Provider>
 

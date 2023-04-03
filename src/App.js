@@ -14,7 +14,7 @@ import { LoginContext } from './components/ContextProvider/Context';
 import { useEffect, useContext, useState } from "react";
 
 function App() {
-  const { empData, setempData } = useContext(LoginContext);
+  const { state, actions } = useContext(LoginContext);
 
   const loadData = async () => {
     let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
@@ -24,12 +24,11 @@ function App() {
       }
     })
     response = await response.json()
-    setempData(response[0]);
+    actions.setempData(response[0]);
   }
 
   useEffect(() => {
     loadData();
-    console.log(empData);
   })
 
   return (

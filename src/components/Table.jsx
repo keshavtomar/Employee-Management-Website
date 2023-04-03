@@ -6,7 +6,7 @@ import { LoginContext } from './ContextProvider/Context';
 
 
 export default function Table() {
-    const { empData, setempData } = useContext(LoginContext);
+    const { state, actions } = useContext(LoginContext);
 
     // const [empData, setempData] = useState([])
 
@@ -41,8 +41,8 @@ export default function Table() {
                 </thead>
 
                 <tbody>
-                    {empData !== [] ?
-                        empData.map((emp, i) => {
+                    {state.empData !== [] ?
+                        state.empData.map((emp, i) => {
                             return (
                                 <Row data={emp} ind={i} key={i} />
                             );
