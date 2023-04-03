@@ -24,6 +24,7 @@ function App() {
       }
     })
     response = await response.json()
+    console.log(response[0]);
     setempData(response[0]);
   }
 
