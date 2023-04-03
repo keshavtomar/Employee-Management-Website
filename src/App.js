@@ -29,9 +29,9 @@ function App() {
 
   useEffect(() => {
     loadData();
+    console.log(empData);
   })
 
-  console.log(empData);
   return (
     <div>
       <Router>
