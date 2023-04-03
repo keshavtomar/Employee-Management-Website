@@ -5,7 +5,7 @@ export const LoginContext = createContext("");
 
 const Context = ({ children }) => {
 
-    const [empData, setempData] = useState("");
+    const [empData, setempData] = useState([]);
 
     return (
 
