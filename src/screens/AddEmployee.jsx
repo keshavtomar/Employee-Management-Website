@@ -26,7 +26,6 @@ export default function AddEmployee() {
         e.preventDefault();
         const responseid = await fetch("https://employee-management-api.vercel.app/api/getId", {
             method: 'POST',
-            mode: 'no-cors',
             headers: {
                 'Content-type': 'application/json'
             },
