@@ -1,29 +1,27 @@
 import React, { useState, useEffect, useContext } from 'react'
 import '../styles/tablestyle.css'
 import Row from './Row';
-import { LoginContext } from './ContextProvider/Context';
 
 
 
 export default function Table() {
-    const { empData, setempData } = useContext(LoginContext);
 
-    // const [empData, setempData] = useState([])
+    const [empData, setempData] = useState([])
 
-    // const loadData = async () => {
-    //     let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
-    //         method: "GET",
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-    //     response = await response.json()
-    //     setempData(response[0]);
-    // }
+    const loadData = async () => {
+        let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        response = await response.json()
+        setempData(response[0]);
+    }
 
-    // useEffect(() => {
-    //     loadData();
-    // }, [])
+    useEffect(() => {
+        loadData();
+    }, [])
 
     return (
         <div>
