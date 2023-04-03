@@ -17,18 +17,6 @@ function App() {
   const { empData, setempData } = useContext(LoginContext);
 
 
-  useEffect(() => {
-    const loadData = async () => {
-      const response = await fetch("http://localhost:4000/api/employeeData", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      const data = await response.json()
-    }
-    loadData();
-  }, [])
 
   return (
     <div>
