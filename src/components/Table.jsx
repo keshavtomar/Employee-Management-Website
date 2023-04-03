@@ -6,24 +6,24 @@ import { LoginContext } from './ContextProvider/Context';
 
 
 export default function Table() {
-    const { state, actions } = useContext(LoginContext);
+    // const { state, actions } = useContext(LoginContext);
 
-    // const [empData, setempData] = useState([])
+    const [empData, setempData] = useState([])
 
-    // const loadData = async () => {
-    //     let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
-    //         method: "GET",
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-    //     response = await response.json()
-    //     setempData(response[0]);
-    // }
+    const loadData = async () => {
+        let response = await fetch("https://employee-management-api-oyx7.onrender.com/api/employeeData", {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        response = await response.json()
+        setempData(response[0]);
+    }
 
-    // useEffect(() => {
-    //     loadData();
-    // }, [])
+    useEffect(() => {
+        loadData();
+    }, [])
 
     return (
         <div>
@@ -41,8 +41,8 @@ export default function Table() {
                 </thead>
 
                 <tbody>
-                    {state.empData !== [] ?
-                        state.empData.map((emp, i) => {
+                    {empData !== [] ?
+                        empData.map((emp, i) => {
                             return (
                                 <Row data={emp} ind={i} key={i} />
                             );

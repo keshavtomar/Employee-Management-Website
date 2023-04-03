@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react'
 
 export const LoginContext = createContext("");
 
-const Context = ({ children }) => {
+const Provider = ({ children }) => {
 
     const [empData, setempData] = useState([]);
     const value = { state: { empData }, actions: { setempData } };
@@ -18,4 +18,4 @@ const Context = ({ children }) => {
     )
 }
 
-export default Context
+export default Provider

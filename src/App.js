@@ -25,11 +25,11 @@ function App() {
     })
     response = await response.json()
     actions.setempData(response[0]);
-    console.log(state.empData);
   }
 
   useEffect(() => {
     loadData();
+    console.log(state.empData);
   })
 
   return (
