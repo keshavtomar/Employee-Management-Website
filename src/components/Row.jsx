@@ -19,7 +19,7 @@ export default function Row(props) {
 
 
     const setCoordinates = async () => {
-        const response = await fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=5148a17aade8598e3088f02cfe1ca5c3");
+        const response = await fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=5148a17aade8598e3088f02cfe1ca5c3");
         const res = await response.json();
         await setlat(res[0].lat)
         await setlon(res[0].lon)
