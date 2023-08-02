@@ -37,7 +37,8 @@ export default function Navbar() {
             sx: {
                 bgcolor: stringToColor(name),
             },
-            children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+            children:'A',
+            // children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
         };
     }
 
