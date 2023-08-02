@@ -22,7 +22,7 @@ export default function Login() {
 
     async function handleSubmit(event) {
         event.preventDefault();
-        const response = await fetch("https://employee-management-api-oyx7.onrender.com/api/loginUser", {
+        const response = await fetch("https://employee-management-api-a9px.onrender.com/api/loginUser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

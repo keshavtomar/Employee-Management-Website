@@ -24,7 +24,7 @@ export default function AddEmployee() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const responseid = await fetch("https://employee-management-api-oyx7.onrender.com/api/getId", {
+        const responseid = await fetch("https://employee-management-api-a9px.onrender.com/api/getId", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
