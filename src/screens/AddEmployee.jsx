@@ -35,7 +35,7 @@ export default function AddEmployee() {
         const ids = await responseid.json();
         const gotId = ids.id;
 
-        const response = await fetch("https://employee-management-api-oyx7.onrender.com/api/addEmployee", {
+        const response = await fetch("https://employee-management-api-a9px.onrender.com/api/addEmployee", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

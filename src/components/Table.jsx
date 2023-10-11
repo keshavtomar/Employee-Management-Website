@@ -39,7 +39,7 @@ export default function Table() {
                 </thead>
 
                 <tbody>
-                    {empData !== [] ?
+                    {empData !== null ?
                         empData.map((emp, i) => {
                             return (
                                 <Row data={emp} ind={i} key={i} />
